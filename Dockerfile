@@ -15,7 +15,7 @@ COPY  --from=builder /app/dist ./app/dist
 COPY  --from=builder /app/database ./app/database
 COPY  --from=builder /app/package.json ./app
 COPY  --from=builder /app/.sequelizerc ./app
-COPY --from=builder /app/.env ./app
+
 ENV PORT=3000
 ENV NODE_ENV=production
 WORKDIR /app
